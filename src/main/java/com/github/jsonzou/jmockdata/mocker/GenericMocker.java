@@ -10,15 +10,14 @@ import java.lang.reflect.ParameterizedType;
  */
 public class GenericMocker implements Mocker<Object> {
 
-  private ParameterizedType type;
+    private ParameterizedType type;
 
-  GenericMocker(ParameterizedType type) {
-    this.type = type;
-  }
+    GenericMocker(ParameterizedType type) {
+        this.type = type;
+    }
 
-  @Override
-  public Object mock(DataConfig mockConfig) {
-    return new BaseMocker(type.getRawType(), type.getActualTypeArguments()).mock(mockConfig);
-  }
-
+    @Override
+    public Object mock(DataConfig mockConfig) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 }

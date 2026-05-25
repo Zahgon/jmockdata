@@ -15,29 +15,17 @@ import java.util.List;
  */
 public class CollectionMocker implements Mocker<Object> {
 
-  private Class clazz;
+    private Class clazz;
 
-  private Type genericType;
+    private Type genericType;
 
-  CollectionMocker(Class clazz, Type genericType) {
-    this.clazz = clazz;
-    this.genericType = genericType;
-  }
-
-  @Override
-  public Object mock(DataConfig mockConfig) {
-    int size = RandomUtils.nextSize(mockConfig.sizeRange()[0], mockConfig.sizeRange()[1]);
-    Collection<Object> result;
-    if (List.class.isAssignableFrom(clazz)) {
-      result = new ArrayList<>(size);
-    } else {
-      result = new HashSet<>(size);
+    CollectionMocker(Class clazz, Type genericType) {
+        this.clazz = clazz;
+        this.genericType = genericType;
     }
-    BaseMocker baseMocker = new BaseMocker(genericType);
-    for (int index = 0; index < size; index++) {
-      result.add(baseMocker.mock(mockConfig));
-    }
-    return result;
-  }
 
+    @Override
+    public Object mock(DataConfig mockConfig) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 }

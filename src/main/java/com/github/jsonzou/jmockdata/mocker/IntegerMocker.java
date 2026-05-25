@@ -10,15 +10,8 @@ import com.github.jsonzou.jmockdata.util.StringUtils;
  */
 public class IntegerMocker implements Mocker<Integer> {
 
-  @Override
-  public Integer mock(DataConfig mockConfig) {
-    /**
-     * 若根据正则模拟
-     */
-    if(StringUtils.isNotEmpty(mockConfig.numberRegex())){
-      return RandomUtils.nextNumberFromRegex(mockConfig.numberRegex()).intValue();
+    @Override
+    public Integer mock(DataConfig mockConfig) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-    return RandomUtils.nextInt(mockConfig.intRange()[0], mockConfig.intRange()[1]);
-  }
-
 }

@@ -11,37 +11,39 @@ import java.util.regex.Pattern;
  * @Description:
  */
 public class DateTool {
-   public enum DatePattern{
-        yyyy_MM_dd(Pattern.compile("\\d{4}-\\d{2}-\\d{2}"),"yyyy-MM-dd"),
-        yyyy_MM_dd__HH$mm$ss(Pattern.compile("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}"),"yyyy-MM-dd HH:mm:ss"),
-        yyyylMMldd(Pattern.compile("\\d{4}/\\d{2}/\\d{2}"),"yyyy/MM/dd"),
-        yyyylMMlddHH__$mm$ss(Pattern.compile("\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}:\\d{2}"),"yyyy/MM/dd HH:mm:ss"),
-        yyyyMMdd(Pattern.compile("\\d{8}"),"yyyyMMdd"),
-        yyyyMMddHHmmss(Pattern.compile("\\d{14}"),"yyyyMMddHHmmss");
+
+    public enum DatePattern {
+
+        yyyy_MM_dd(Pattern.compile("\\d{4}-\\d{2}-\\d{2}"), "yyyy-MM-dd"),
+        yyyy_MM_dd__HH$mm$ss(Pattern.compile("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}"), "yyyy-MM-dd HH:mm:ss"),
+        yyyylMMldd(Pattern.compile("\\d{4}/\\d{2}/\\d{2}"), "yyyy/MM/dd"),
+        yyyylMMlddHH__$mm$ss(Pattern.compile("\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}:\\d{2}"), "yyyy/MM/dd HH:mm:ss"),
+        yyyyMMdd(Pattern.compile("\\d{8}"), "yyyyMMdd"),
+        yyyyMMddHHmmss(Pattern.compile("\\d{14}"), "yyyyMMddHHmmss");
+
         private Pattern regx;
+
         private String format;
 
-
-
         DatePattern(Pattern regx, String format) {
-            this.regx=regx;
-            this.format=format;
+            this.regx = regx;
+            this.format = format;
         }
 
         public Pattern getRegx() {
-            return regx;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public void setRegx(Pattern regx) {
-            this.regx = regx;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public String getFormat() {
-            return format;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
 
         public void setFormat(String format) {
-            this.format = format;
+            throw new UnsupportedOperationException("STUB: not implemented");
         }
     }
 
@@ -52,8 +54,8 @@ public class DateTool {
      * @return Date
      * @throws ParseException
      */
-    public static Date getString2Date(String dateStr,String format) throws ParseException {
-        return new SimpleDateFormat(format).parse(dateStr);
+    public static Date getString2Date(String dateStr, String format) throws ParseException {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -63,8 +65,7 @@ public class DateTool {
      * @throws ParseException
      */
     public static Date getString2DateAuto(String dateStr) throws ParseException {
-        String dateFormat = getDateFormat(dateStr);
-        return getString2Date(dateStr,dateFormat);
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 
     /**
@@ -72,12 +73,7 @@ public class DateTool {
      * @param dateStr
      * @return String
      */
-    public static String getDateFormat(String dateStr){
-        for (DatePattern dt:DatePattern.values()){
-            if(dt.getRegx().matcher(dateStr).matches()){
-                return dt.getFormat();
-            }
-        }
-        return null;
+    public static String getDateFormat(String dateStr) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
 }

@@ -12,9 +12,8 @@ import java.math.BigInteger;
  */
 public class BigDecimalMocker implements Mocker<BigDecimal> {
 
-  @Override
-  public BigDecimal mock(DataConfig mockConfig) {
-    return BigDecimal.valueOf(mockConfig.globalConfig().getMocker(Double.class).mock(mockConfig));
-  }
-
+    @Override
+    public BigDecimal mock(DataConfig mockConfig) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 }

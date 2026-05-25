@@ -1,56 +1,55 @@
 package com.github.jsonzou.jmockdata.util;
 
 import com.github.jsonzou.jmockdata.util.randomstring.RandomStringGenerator;
-
 import java.math.BigDecimal;
 import java.util.Random;
 
 public final class RandomUtils {
 
-  private final static Random RANDOM;
-  private final static RandomStringGenerator REGEX_GENERATOR;
+    private final static Random RANDOM;
 
-  /**
-   * Init The Random & Regex Generator
-   */
-  static{
-    RANDOM = new Random();
-    REGEX_GENERATOR = new RandomStringGenerator(RANDOM,8);
-  }
-  private RandomUtils() {
+    private final static RandomStringGenerator REGEX_GENERATOR;
 
-  }
+    /**
+     * Init The Random & Regex Generator
+     */
+    static {
+        RANDOM = new Random();
+        REGEX_GENERATOR = new RandomStringGenerator(RANDOM, 8);
+    }
 
-  public static boolean nextBoolean() {
-    return RANDOM.nextBoolean();
-  }
+    private RandomUtils() {
+    }
 
-  public static int nextInt(int startInclusive, int endExclusive) {
-    return startInclusive + RANDOM.nextInt(endExclusive - startInclusive);
-  }
+    public static boolean nextBoolean() {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
-  public static long nextLong(long startInclusive, long endExclusive) {
-    return (long) nextDouble(startInclusive, endExclusive);
-  }
+    public static int nextInt(int startInclusive, int endExclusive) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
-  public static float nextFloat(float startInclusive, float endInclusive) {
-    return startInclusive + ((endInclusive - startInclusive) * RANDOM.nextFloat());
-  }
+    public static long nextLong(long startInclusive, long endExclusive) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
-  public static double nextDouble(double startInclusive, double endInclusive) {
-    return startInclusive + ((endInclusive - startInclusive) * RANDOM.nextDouble());
-  }
+    public static float nextFloat(float startInclusive, float endInclusive) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
-  public static int nextSize(int startInclusive, int endInclusive) {
-    return startInclusive + RANDOM.nextInt(endInclusive - startInclusive + 1);
-  }
+    public static double nextDouble(double startInclusive, double endInclusive) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
-  public static BigDecimal nextNumberFromRegex(String regex) {
-    String numberStr = REGEX_GENERATOR.generateByRegex(regex);
-    return new BigDecimal(numberStr);
-  }
-  public static String nextStringFromRegex(String regex) {
-    return REGEX_GENERATOR.generateByRegex(regex);
-  }
+    public static int nextSize(int startInclusive, int endInclusive) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 
+    public static BigDecimal nextNumberFromRegex(String regex) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
+
+    public static String nextStringFromRegex(String regex) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 }

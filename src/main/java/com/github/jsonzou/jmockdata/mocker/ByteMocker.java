@@ -10,15 +10,8 @@ import com.github.jsonzou.jmockdata.util.StringUtils;
  */
 public class ByteMocker implements Mocker<Byte> {
 
-  @Override
-  public Byte mock(DataConfig mockConfig) {
-    /**
-     * 若根据正则模拟
-     */
-    if(StringUtils.isNotEmpty(mockConfig.numberRegex())){
-      return RandomUtils.nextNumberFromRegex(mockConfig.numberRegex()).byteValue();
+    @Override
+    public Byte mock(DataConfig mockConfig) {
+        throw new UnsupportedOperationException("STUB: not implemented");
     }
-    return (byte) RandomUtils.nextInt(mockConfig.byteRange()[0], mockConfig.byteRange()[1]);
-  }
-
 }

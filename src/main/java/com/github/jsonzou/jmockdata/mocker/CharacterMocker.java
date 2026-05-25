@@ -10,10 +10,8 @@ import com.github.jsonzou.jmockdata.util.RandomUtils;
  */
 public class CharacterMocker implements Mocker<Character> {
 
-  @Override
-  public Character mock(DataConfig mockConfig) {
-    char[] charSeed = mockConfig.charSeed();
-    return charSeed[RandomUtils.nextInt(0, charSeed.length)];
-  }
-
+    @Override
+    public Character mock(DataConfig mockConfig) {
+        throw new UnsupportedOperationException("STUB: not implemented");
+    }
 }
